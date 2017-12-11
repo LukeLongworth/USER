@@ -1,8 +1,10 @@
 #!/bin/bash
 
+'''
 # This code steps through each realisation and compiles the liquefaction and landslide information
 # Inputs: 1) A filepath to the runs directory within which each fault is a subfolder
 #         2) A file that contains all the fault names. This will need to be written for each set of cybershake runs (eg. v17p8)
+'''
 
 # Checks if you have enough inputs
 if [[ $# -lt 2 ]]; then
@@ -32,9 +34,9 @@ do
     #Run the csv conversion script
     python export_lonlat_pgv2csv.py $realisation_path/Data/database.db $run_dir/$run_name/GM/Sim/Data/$run_name/$realisation
     #Produce the grid.xml file
-    mag=`python /home/lukelongworth/get_mag.py $realisation_path` # Get the magnitude of the rupture
-    depth=`python /home/lukelongworth/get_depth.py $realisation_path` # Get the depth of the rupture
-    corners=`python /home/lukelongworth/get_corners.py $run_dir $run_name $realisation` #Get the corners of the surface
+    mag=`python /home/lukelongworth/USER/get_mag.py $realisation_path` # Get the magnitude of the rupture
+    depth=`python /home/lukelongworth/USER/get_depth.py $realisation_path` # Get the depth of the rupture
+    corners=`python /home/lukelongworth/USER/get_corners.py $run_dir $run_name $realisation` #Get the corners of the surface
     python /home/nesi00213/groundfailure/haz_analysis/grd2grid.py $run_dir/$run_name/GM/Sim/Data/$run_name/$realisation/lonlatpgv_database.csv $realisation $run_dir/$run_name/GM/Sim/Data/$run_name/$realisation -m $mag -d $depth -c $corners #Run the script using the default resolution of 2k
     #Run the landslide calcs
     python /home/nesi00213/groundfailure/plot_ls.py $run_dir/$run_name -r $realisation
