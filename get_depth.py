@@ -1,7 +1,9 @@
 # This code finds the depth of a given realisation
-# It is designed to work with the cybershake_run_liqls.sh in /home/lukelongworth
+# It is designed to work with the cybershake_run_liqls.sh in /home/lukelongworth/USER
 # Inputs: The filepath to the Sim/Data of a particular realisation
-# Outputs: A float
+#         e.g. /home/nesi00213/Runfolder/Cybershake/v17p8/Runs/AlpineF2K/GM/Validation/AlpineF2K_HYP01-03_S1254
+# Outputs: A float representing the depth of the rupture
+
 import ConfigParser
 import os
 import argparse

@@ -1,3 +1,6 @@
+# This compiles all of the areas in the meshblock data from StatsNZ
+# The data takes meshblock_area.csv and produces meshblock_area_compiled.csv
+
 i_data = open('/home/lukelongworth/meshblock_area.csv')
 f_data = open('/home/lukelongworth/meshblock_area_compiled.csv', 'a')
 

@@ -1,6 +1,9 @@
 #!/bin/bash 
 
 # Takes a list of all realisations and produces the .bil files for susceptibility
+# Inputs: 1) Filepath to the directory of choice (e.g. /home/../v17p8/Runs)
+#         2) A list of all relevant runs. Just a simple text file.
+# Outputs: A bunch of .bil files that can be used more easily in GIS
 
 run_dir=$1
 list_runs=`cat $2`

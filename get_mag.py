@@ -1,7 +1,9 @@
 # This code finds the magnitude of a given realisation
 # It is designed to work with the cybershake_run_liqls.sh in /home/lukelongworth
-# Inputs: The filepath to the Sim/Data of a particular realisation
-# Outputs: A float
+# Inputs: The filepath to a particular realisation
+#         e.g. /home/nesi00213/Runfolder/Cybershake/v17p8/Runs/AlpineF2K/GM/Validation/AlpineF2K_HYP01-03_S1254
+# Outputs: A float representing the magnitude
+
 import ConfigParser
 import os
 import argparse

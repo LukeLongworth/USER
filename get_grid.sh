@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#This is a one-time-use code (that is easily editable) to produce a bunch of similar grid.xml files for comparison. This was specifically designed to take different grid resolutions and compare them.
+
 cd /home/nesi00213/dev/post-processing/scripts/
 
 # AlpineF2K_HYP01-03_S1244
